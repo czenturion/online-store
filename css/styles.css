@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* Fonts */
+
+.lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Layot */
+
+header {
+    box-shadow: 0 3px .5em gray;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.store-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.header nav {
+    max-width: 400px;
+    width: 100%;
+    display: block;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header nav ul li {
+    flex: 1;
+}
+
+.header nav a {
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+
+
+.header .toolbar a {
+    text-decoration: none;
+}
+
+.header .toolbar img {
+    width: 50px;
+    height: 50px;
+}
