@@ -1,11 +1,20 @@
 {
   "name": "online-store",
   "version": "1.0.0",
+  "type": "module",
   "description": "Online store",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html"
   },
   "author": "czntrn",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.13.2",
+    "process": "^0.11.10"
+  }
 }
