@@ -20,7 +20,16 @@ export const API = {
                     category: product.category
                 })
 
-            console.log(res)
+            return res.data
+        } catch (error) {
+            console.error(error)
+        }
+    },
+
+    async getAllCategories() {
+        try {
+            const res = await instance.get('/products/categories')
+
             return res.data
         } catch (error) {
             console.error(error)
