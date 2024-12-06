@@ -26,7 +26,11 @@
                 <ul class="lato-regular">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Sales</a></li>
-                    <li><a href="#">Categories<div class="arrow-up"></div></a></li>
+                    <li class="categories-dropdown-menu">
+                        <a href="#">Categories<div class="arrow-up"></div></a>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </li>
                 </ul>
             </nav>
 
@@ -46,8 +50,13 @@
 
     <main>
         <section class="products-result wrapper lato-regular">
+            <div class="add-item-wrapper">
+                <button class="add-item-btn">Add item <img src="assets/icons/add-icon.svg" alt="Add icon"></button>
+            </div>
             <div class="product-list"></div>
-            <button ></button>
+            <div class="load-more-wrapper">
+                <button class="load-more-btn">Load more</button>
+            </div>
         </section>
     </main>
 
