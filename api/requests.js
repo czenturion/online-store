@@ -13,12 +13,12 @@ export const API = {
     async addNewProduct(product) {
         try {
             const res = await instance.post('/products', {
-                    title: product.name,
-                    price: product.price,
-                    description: product.description,
-                    image: 'https://i.pravatar.cc',
-                    category: product.category
-                })
+                title: product.name,
+                price: product.price,
+                description: product.description,
+                image: 'https://i.pravatar.cc',
+                category: product.category
+            })
 
             return res.data
         } catch (error) {
@@ -29,6 +29,16 @@ export const API = {
     async getAllCategories() {
         try {
             const res = await instance.get('/products/categories')
+
+            return res.data
+        } catch (error) {
+            console.error(error)
+        }
+    },
+
+    async getProductsByCategory(cat) {
+        try {
+            const res = await instance.get(`/products/category/${cat}`)
 
             return res.data
         } catch (error) {
