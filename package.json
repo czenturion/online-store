@@ -5,7 +5,9 @@
   "description": "Online store",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "prepare": "husky",
+    "test": "echo \"No test specified\" && exit 0"
   },
   "author": "czntrn",
   "license": "ISC",
@@ -14,7 +16,13 @@
   },
   "devDependencies": {
     "buffer": "^6.0.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
     "parcel": "^2.13.2",
+    "prettier": "3.4.2",
     "process": "^0.11.10"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

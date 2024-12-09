@@ -1,80 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" href="assets/logos/store-logo.svg" />
     <title>Online store</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div class="header wrapper">
-            <a href="#">
-                <img class="store-logo" src="assets/logos/store-logo.svg" alt="Store logo">
-            </a>
+      <div class="header wrapper">
+        <a href="#">
+          <img
+            class="store-logo"
+            src="assets/logos/store-logo.svg"
+            alt="Store logo"
+          />
+        </a>
 
-            <nav>
-                <ul class="lato-regular">
-                    <li class="home"><a href="#">Home</a></li>
-                    <li class="categories-dropdown-menu">
-                        <a href="#">Categories<div class="arrow-up"></div></a>
-                        <ul class="dropdown-menu">
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+        <nav>
+          <ul class="lato-regular">
+            <li class="home"><a href="#">Home</a></li>
+            <li class="categories-dropdown-menu">
+              <a href="#"
+                >Categories
+                <div class="arrow-up"></div
+              ></a>
+              <ul class="dropdown-menu"></ul>
+            </li>
+          </ul>
+        </nav>
 
-            <div class="toolbar">
-                <a href="#">
-                    <img src="assets/icons/search-icon.svg" alt="Search icon">
-                </a>
-                <a href="#">
-                    <img src="assets/icons/cart-icon.svg" alt="Cart icon">
-                </a>
-                <a href="#">
-                    <img src="assets/icons/profile-icon.svg" alt="Profile icon">
-                </a>
-            </div>
+        <div class="toolbar">
+          <a href="#">
+            <img src="assets/icons/search-icon.svg" alt="Search icon" />
+          </a>
+          <a href="#">
+            <img src="assets/icons/cart-icon.svg" alt="Cart icon" />
+          </a>
+          <a href="#">
+            <img src="assets/icons/profile-icon.svg" alt="Profile icon" />
+          </a>
         </div>
+      </div>
     </header>
 
     <main>
-        <section class="products-result wrapper lato-regular">
-            <div class="add-item-wrapper">
-                <button class="add-item-btn">Add item <img src="assets/icons/add-icon.svg" alt="Add icon"></button>
-            </div>
-            <div class="product-list"></div>
-            <div class="load-more-wrapper">
-                <button class="load-more-btn">Load more</button>
-            </div>
-        </section>
+      <section class="products-result wrapper lato-regular">
+        <div class="add-item-wrapper">
+          <button class="add-item-btn">
+            Add item <img src="assets/icons/add-icon.svg" alt="Add icon" />
+          </button>
+        </div>
+        <div class="product-list"></div>
+        <div class="load-more-wrapper">
+          <button class="load-more-btn">Load more</button>
+        </div>
+        <div id="notification" class="notification"></div>
+      </section>
+
+      <section class="add-item-modal lato-regular">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Add New Product</h2>
+          <form class="add-item-form">
+            <label for="productName">Name:</label>
+            <input type="text" id="productName" required />
+
+            <label for="productDescription">Description:</label>
+            <textarea id="productDescription" rows="4" required></textarea>
+
+            <label for="productCategory">Category:</label>
+            <select id="productCategory" required></select>
+
+            <label for="productPrice">Price:</label>
+            <input type="number" id="productPrice" required />
+
+            <label for="productImage">Image URL:</label>
+            <input type="url" id="productImage" required />
+
+            <button class="submit" type="submit">Add Product</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="footer wrapper">
-            <div class="info">
-                <div class="store-info lato-light">
-                    <img src="assets/logos/store-logo.svg" alt="Store logo">
-                    <p>Online store 2024</p>
-                </div>
-            </div>
-            <div class="license lato-light">
-                <p>CZNTRN</p>
-                <p>GitHub: czenturion</p>
-            </div>
+      <div class="footer wrapper">
+        <div class="info">
+          <div class="store-info lato-light">
+            <img src="assets/logos/store-logo.svg" alt="Store logo" />
+            <p>Online store 2024</p>
+          </div>
         </div>
+        <div class="license lato-light">
+          <a href="https://github.com/czenturion" target="_blank">
+            CZNTRN
+            <img src="assets/icons/github-icon.svg" alt="Github icon" />
+          </a>
+        </div>
+      </div>
     </footer>
 
     <script src="scripts/index.js" type="module"></script>
-</body>
-
+  </body>
 </html>
