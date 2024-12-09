@@ -1,6 +1,6 @@
 export const errorMsg = () => {
-  const errorDiv = document.createElement("div")
-  errorDiv.classList.add("error-result")
+  const errorDiv = document.createElement("div");
+  errorDiv.classList.add("error-result");
   errorDiv.innerHTML = "Products load error, Please refresh page.";
   productList.appendChild(errorDiv);
   return;
