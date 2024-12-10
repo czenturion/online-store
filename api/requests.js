@@ -1,5 +1,5 @@
-import { instance } from "./api.js"
-import { showError } from "../scripts/handlers.js"
+import { instance } from "./api.js";
+import { showError } from "../scripts/handlers.js";
 
 export const API = {
   async getProducts(limit = 6) {

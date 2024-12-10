@@ -16,7 +16,7 @@ export const createProductCard = (product, deleteProduct) => {
             <h3>${product.title}</h3>
             <p>${product.description}</p>
             <p><strong>${product.price} $</strong></p>
-            <button class="delete-btn">X</button>
+            <button class='delete-btn'>X</button>
         `;
 
   productCard.querySelector(".delete-btn").addEventListener("click", (e) => {

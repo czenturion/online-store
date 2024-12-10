@@ -83,16 +83,22 @@ const loadCategories = async () => {
 
 const deleteProduct = async (id) => {
   try {
+    const productCard = document.querySelector(
+      `.product-card[product-id="${id}"]`,
+    );
+    const deleteBtn = productCard.querySelector(".delete-btn");
+    if (deleteBtn) {
+      deleteBtn.style.display = "none";
+    }
+
     const res = await API.deleteProduct(id);
 
-    const productCard = document.querySelector(
-      `.product-card[data-id="${id}"]`,
-    );
     if (productCard) productCard.remove();
 
     showNotification(`Product with id: ${id} deleted!`);
   } catch (error) {
     showError(`Product with id: ${id} didnt deleted`);
+    deleteBtn.style.display = "inline-block";
   }
 };
 
@@ -133,7 +139,7 @@ addItemForm.addEventListener("submit", async (event) => {
   const res = await API.addNewProduct(newProduct);
 
   showNotification("Product added");
-  const productCard = createProductCard(res);
+  const productCard = createProductCard(res, deleteProduct);
   productList.appendChild(productCard);
 
   addItemForm.reset();
