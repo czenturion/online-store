@@ -1,6 +1,6 @@
 export const errorMsg = () => {
-  const errorDiv = document.createElement("div")
-  errorDiv.classList.add("error-result")
+  const errorDiv = document.createElement("div");
+  errorDiv.classList.add("error-result");
   errorDiv.innerHTML = "Products load error, Please refresh page.";
   productList.appendChild(errorDiv);
   return;
@@ -16,7 +16,7 @@ export const createProductCard = (product, deleteProduct) => {
             <h3>${product.title}</h3>
             <p>${product.description}</p>
             <p><strong>${product.price} $</strong></p>
-            <button class="delete-btn">X</button>
+            <button class='delete-btn'>X</button>
         `;
 
   productCard.querySelector(".delete-btn").addEventListener("click", (e) => {
